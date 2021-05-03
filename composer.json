@@ -4,6 +4,7 @@
     "type": "library",
     "license": "MIT",
     "require": {
+        "apache/log4php": "2.3.0"
     },
     "autoload": {
         "psr-4": {
