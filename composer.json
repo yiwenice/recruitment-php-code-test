@@ -1,13 +1,13 @@
 {
-    "name": "ks/ecom-php-lib",
-    "description": "Shared PHP library for Ecom Platform",
+    "name": "ks/recruitment-php-code-test",
+    "description": "PHP code test",
     "type": "library",
     "license": "MIT",
     "require": {
     },
     "autoload": {
         "psr-4": {
-            "EcomLib\\": "src/",
+            "App\\": "src/",
             "Test\\": "tests/"
         },
         "classmap": [

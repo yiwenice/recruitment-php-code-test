@@ -1,13 +1,13 @@
 <?php
 
-namespace EcomLib\Util\Example;
+namespace App\Util\Example;
 
 /**
  * Class Example
  *
  * 示例代碼，可以在 tests/Util/Example/ExampleTest.php 找到對應的單元測試
  *
- * @package EcomLib\Util\Example
+ * @package App\Util\Example
  */
 class Example
 {

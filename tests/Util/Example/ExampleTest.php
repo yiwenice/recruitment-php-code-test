@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use EcomLib\Util\Example\Example;
+use App\Util\Example\Example;
 
 /**
  * 單元測試示例，每個用例都要有一個 function

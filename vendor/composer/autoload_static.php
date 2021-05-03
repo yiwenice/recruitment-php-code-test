@@ -42,14 +42,14 @@ class ComposerStaticInitaa3e3a42d9650960c63fb627a7234031
             'Prophecy\\' => 9,
             'PhpParser\\' => 10,
         ),
-        'E' => 
-        array (
-            'EcomLib\\' => 8,
-        ),
         'D' => 
         array (
             'Doctrine\\Instantiator\\' => 22,
             'DeepCopy\\' => 9,
+        ),
+        'A' => 
+        array (
+            'App\\' => 4,
         ),
     );
 
@@ -93,10 +93,6 @@ class ComposerStaticInitaa3e3a42d9650960c63fb627a7234031
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
-        'EcomLib\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
-        ),
         'Doctrine\\Instantiator\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
@@ -105,12 +101,14 @@ class ComposerStaticInitaa3e3a42d9650960c63fb627a7234031
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
     );
 
     public static $classMap = array (
-        'EcomLib\\Util\\Example' => __DIR__ . '/../..' . '/src/Util/Example.php',
-        'EcomLib\\Util\\Url' => __DIR__ . '/../..' . '/src/Util/Url.php',
-        'ExtraInfo' => __DIR__ . '/../..' . '/src/Model/Member/ExtraInfo.php',
+        'App\\Util\\Example\\Example' => __DIR__ . '/../..' . '/src/Util/Example/Example.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\ActualValueIsNotAnObjectException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Exception/ActualValueIsNotAnObjectException.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',

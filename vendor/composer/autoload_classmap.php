@@ -6,9 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'EcomLib\\Util\\Example' => $baseDir . '/src/Util/Example.php',
-    'EcomLib\\Util\\Url' => $baseDir . '/src/Util/Url.php',
-    'ExtraInfo' => $baseDir . '/src/Model/Member/ExtraInfo.php',
+    'App\\Util\\Example\\Example' => $baseDir . '/src/Util/Example/Example.php',
     'PHPUnit\\Exception' => $vendorDir . '/phpunit/phpunit/src/Exception.php',
     'PHPUnit\\Framework\\ActualValueIsNotAnObjectException' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/ActualValueIsNotAnObjectException.php',
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/Framework/Assert.php',
@@ -92,7 +90,7 @@ return array(
     'PHPUnit\\Framework\\InvalidDataProviderException' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/InvalidDataProviderException.php',
     'PHPUnit\\Framework\\InvalidParameterGroupException' => $vendorDir . '/phpunit/phpunit/src/Framework/InvalidParameterGroupException.php',
     'PHPUnit\\Framework\\MissingCoversAnnotationException' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/MissingCoversAnnotationException.php',
-    'PHPUnit\\Framework\\MockObject\\Api' => $vendorDir . '/phpunit/phpunit/src/Framework/MockObject/Api/Request.php',
+    'PHPUnit\\Framework\\MockObject\\Api' => $vendorDir . '/phpunit/phpunit/src/Framework/MockObject/Api/Api.php',
     'PHPUnit\\Framework\\MockObject\\BadMethodCallException' => $vendorDir . '/phpunit/phpunit/src/Framework/MockObject/Exception/BadMethodCallException.php',
     'PHPUnit\\Framework\\MockObject\\Builder\\Identity' => $vendorDir . '/phpunit/phpunit/src/Framework/MockObject/Builder/Identity.php',
     'PHPUnit\\Framework\\MockObject\\Builder\\InvocationMocker' => $vendorDir . '/phpunit/phpunit/src/Framework/MockObject/Builder/InvocationMocker.php',
