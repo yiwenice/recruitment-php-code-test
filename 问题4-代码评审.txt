@@ -1,0 +1,13 @@
+
+geoHelperAddress($address, $merchant_id = '')：
+	1、37-42行：未判断Thrift 服務接口返回结果$response，就直接json_decode，将可能导致报错
+	2、37-42行：未判断json_decode的解码结果数据，是否为空，是否为想要的解码数据格式
+	3、44行：if ($response['error'] == 0)最好为强判断，当error值为空，或者为null,为字符串00, $response['error'] == 0 都会判断通过，而这时可能不会是想要的结果
+	4、54行：$res = $sMerchant->get_merchant_address($merchant_id); 未判断$res结果是否为空
+	5、61行：if (!isset($data['error']) && (strpos($coordinate,',') !== false)) 没有else代码块，未考虑返回数据为其它时候的情况，比如$coordinate数据为空，程序该如何正确处理
+
+
+checkStatusCallback($order_id, $status):
+	1、未判断当传参$status为其它状态码时，程序如何正确处理，现在程序只判断了以下状态码：900，'901', '902', '903'，'909', '915', '916',
+	  比如当$status=905时，函数将返回 $order_id.'-'，可能这并不是想要的结果
+

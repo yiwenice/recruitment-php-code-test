@@ -1,4 +1,6 @@
 <?php
+namespace App\App;
+
 class HttpRequest {
     function get($url) {
         $ch = curl_init($url);
@@ -12,9 +14,9 @@ class HttpRequest {
 class Demo {
     private $_logger;
     private $_req;
-    function __construct($logger, HttpRequest $req) {
+    function __construct($logger, HttpRequest $req = null) {
         $this->_logger = $logger;
-        $this->_req = $req;
+        $this->_req = $req ? $req : (new HttpRequest());
     }
     function set_req(HttpRequest $req) {
         $this->_req = $req;
@@ -28,7 +30,7 @@ class Demo {
         $result_arr = json_decode($result, true);
         if (in_array('error', $result_arr) && $result_arr['error'] == 0) {
             if (in_array('data', $result_arr)) {
-                return $result_arr['data']
+                return $result_arr['data'];
             }
         } else {
             $this->_logger->error("fetch data error.");

@@ -54,6 +54,13 @@ class ProductHandlerTest extends TestCase
             'create_at' => '2021-04-04 19:23:00',
         ],
     ];
+    
+    protected $ProductHandler;
+    
+    protected function setUp(): void
+    {
+    	$this->ProductHandler = new ProductHandler($this->products);
+    }
 
     public function testGetTotalPrice()
     {
@@ -62,7 +69,19 @@ class ProductHandlerTest extends TestCase
             $price = $product['price'] ?: 0;
             $totalPrice += $price;
         }
-
+        
+        $totalPrice = $this->ProductHandler->getTotalPrice();
+    
         $this->assertEquals(143, $totalPrice);
+    }
+    
+    public function testGetDessertProducts(){
+    	$dessertProducts = $this->ProductHandler->getDessertProducts();
+    	
+    	$this->assertEquals(2, count($dessertProducts));
+    }
+    
+    public function testToTimestamp(){
+    	$products = $this->ProductHandler->toTimestamp();
     }
 }
